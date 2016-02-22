@@ -1,25 +1,51 @@
+
+function pickHero() {
+	alert("pickHero Function");
+	$('.enemies').append($(".choose-hero"));
+	$('.your-char').append(this);
+}
+
+function pickVillain() {
+	alert("pickVillain Function");
+
+	$('.defender').append($('.enemies').children()[0]);
+}
+
+
 $(document).ready(function() {
 
-	$('.choose-hero').click(function() {
+
+// CLICK ON A CHARACTER TO PLACE IN 'YOUR CHARACTER' ////////////////////	
+	$('.choose-hero').click(pickHero);
+
+	// UNBIND CLICK EVENT  ///////////////////////////////////////
+
+	$('.choose-hero').click(function(){
+        $('.choose-hero').unbind('click', pickHero);
+     });
+
+// CLICK ON AN ENEMY TO CHOOSE YOUR VILLAIN /////////////////////////////
+
+	$('.enemies').click(pickVillain);
+
+	// UNBIND CLICK EVENT ///////////////////////////////////////
+
+	$('.enemies').click(function(){
+        $('.enemies').unbind('click', pickVillain);
+     });
 
 
-		$('.enemies').append($(".choose-hero"));
-		$(this).prop('id', 'hero');
-		$('.your-char').append($("#hero"));
-		$('.choose-hero').not(this).removeClass('choose-hero').addClass('enemy');
-		
-	});
 
-	$('.enemy').click(function() {
+	
 
-		
-		$(this).prop('id', 'villain');
-		
-		$('.defender').append($("#villain"));
-		
-	});
+});
 
 	
 
 
-});
+
+
+
+ // $('.enemies').click(function(){
+ //        $('.choose-hero').unbind("click", pickHero);
+ //     });

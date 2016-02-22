@@ -1,10 +1,19 @@
+body {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+body h2 {
+	font-size: 1.8em;
+}
 
 .container-fluid {
 	background-image: url('../images/star_wars_xwing.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-width: 930px;
-	height: 900px;
+	height: 0%;
 	padding-left: 5%;
 }
 
@@ -16,7 +25,7 @@
 	margin-top: 100px;
 }
 
-.characters p {
+p {
 	margin: 3px auto;
 }
 
@@ -24,7 +33,7 @@
 .your-char .col-xs-2,
 .enemies .col-xs-2,
 .defender .col-xs-2 {
-	padding: 0 2% 2% 2%;
+	padding: 0 2%;
     background: white;
     border: 3px solid green;
 }
@@ -41,6 +50,15 @@
 	width: 100%;
 }
 
-.enemies .col-xs-2{
+.enemies .col-xs-2 {
 	background: red;
+}
+
+.defender {
+	padding-bottom: 120px;
+}
+
+.defender .col-xs-2 {
+ background: black;
+ color: white;
 }
