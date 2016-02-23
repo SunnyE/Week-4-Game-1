@@ -54,6 +54,16 @@ p {
 	background: red;
 }
 
+.choose-hero {
+	position: relative;
+	z-index: 100;
+}
+
+.choose-hero img {
+	position: relative;
+	z-index: -1;
+}
+
 .defender {
 	padding-bottom: 120px;
 }

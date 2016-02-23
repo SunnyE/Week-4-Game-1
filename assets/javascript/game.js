@@ -5,18 +5,16 @@ function pickHero() {
 	$('.your-char').append(this);
 }
 
-function pickVillain() {
+function pickVillain(e){
 	alert("pickVillain Function");
-
-	$('.defender').append($('.enemies').children()[0]);
+    $('.defender').append(e.target);
 }
 
 
 $(document).ready(function() {
 
-
 // CLICK ON A CHARACTER TO PLACE IN 'YOUR CHARACTER' ////////////////////	
-	$('.choose-hero').click(pickHero);
+	$('.choose-hero').on('click', pickHero);
 
 	// UNBIND CLICK EVENT  ///////////////////////////////////////
 
@@ -26,26 +24,13 @@ $(document).ready(function() {
 
 // CLICK ON AN ENEMY TO CHOOSE YOUR VILLAIN /////////////////////////////
 
-	$('.enemies').click(pickVillain);
+	$('.enemies').on('click', pickVillain);
 
 	// UNBIND CLICK EVENT ///////////////////////////////////////
 
 	$('.enemies').click(function(){
-        $('.enemies').unbind('click', pickVillain);
-     });
-
-
-
-	
+    	$('.enemies').unbind('click', pickVillain);
+    });
 
 });
 
-	
-
-
-
-
-
- // $('.enemies').click(function(){
- //        $('.choose-hero').unbind("click", pickHero);
- //     });
