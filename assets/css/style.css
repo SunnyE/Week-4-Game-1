@@ -64,8 +64,17 @@ p {
 	z-index: -1;
 }
 
-.defender {
+.counter-report {
 	padding-bottom: 120px;
+}
+
+.attack-report,
+.counter-report {
+	font-size: 18px;
+}
+
+.result {
+	font-size: 3em;
 }
 
 .defender .col-xs-2 {

@@ -9,8 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	
-	
 </head>
 <body>
 	<div class="container-fluid">
@@ -21,22 +19,22 @@
 			<div id= "obi" class="col-xs-2 choose-hero">
 				<p class="text-center">Obi-Wan Kenobi</p>
 				<img src="assets/images/obi-wan.jpg">
-				<p class="text-center">120</p>
+				<p class="text-center health">120</p>
 			</div>
 			<div id="luke" class="col-xs-2 choose-hero">
 				<p class="text-center">Luke Skywalker</p>
 				<img src="assets/images/luke-skywalker.jpg">
-				<p class="text-center">100</p>
+				<p class="text-center health">100</p>
 			</div>
 			<div id="sidious" class="col-xs-2 choose-hero">
 				<p class="text-center">Darth Sidious</p>
 				<img src="assets/images/darth-sidious.png">
-				<p class="text-center">150</p>
+				<p class="text-center health">150</p>
 			</div>
 			<div id="maul" class="col-xs-2 choose-hero">
 				<p class="text-center">Darth Maul</p>
 				<img src="assets/images/darth-maul.jpg">
-				<p class="text-center">180</p>
+				<p class="text-center health">180</p>
 			</div>
 		</div>
 		<div class="pull-left subheader">
@@ -49,7 +47,7 @@
 		</div>
 		<div class="row enemies">
 		</div>
-		<div class="pull-left subheader">
+		<div class="pull-left subheader fight-section">
 			<h2>Fight Section</h2>
 			<button type="button" class="btn btn-danger btn-attack">Attack</button>
 		</div>
@@ -57,6 +55,11 @@
 			<h2>Defender</h2>
 		</div>
 		<div class="row defender">
+		</div>
+		<div class="report">
+			<h2 class="result"></h2>
+			<p class="attack-report"></p>
+			<p class="counter-report"></p>			
 		</div>
 	</div>
 </body>
